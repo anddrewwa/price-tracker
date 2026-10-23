@@ -1,0 +1,26 @@
+name: price_tracker
+description: Track product prices and get notified when items go on sale or drop below a target price.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.1                         # download product pages
+  html: ^0.15.4                        # parse HTML to find the price
+  shared_preferences: ^2.2.3           # save items on the phone
+  flutter_local_notifications: ^17.2.2 # price alert notifications
+  workmanager: '>=0.6.0 <1.0.0'        # background price checks (Android)
+  url_launcher: ^6.2.6                 # open the product page
+  cronet_http: ^1.10.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
